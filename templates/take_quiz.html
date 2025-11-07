@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ quiz.title }}</h2>
+<form method="post" action="{{ url_for('take_quiz_bp.submit_quiz', quiz_id=quiz.id) }}">
+  {% for q in quiz.questions %}
+  <h4>{{ loop.index }}. {{ q.text }}</h4>
+  {% for c in q.choices %}
+  <input type="radio" name="{{ q.id }}" value="{{ c.id }}"> {{ c.text }}<br>
+  {% endfor %}
+  {% endfor %}
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}
