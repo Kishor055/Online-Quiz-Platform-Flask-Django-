@@ -1,6 +1,5 @@
 """
 app.py — Complete Flask application for an Online Quiz Platform
-Author: Generated for your project (customized & documented)
 Purpose: Single-file runnable backend for creating/taking quizzes with:
  - User registration/login (JWT)
  - Quiz creation (with categories & difficulty)
@@ -585,3 +584,4 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port, debug=True)
 from routes.dashboard_routes import dashboard_bp
 app.register_blueprint(dashboard_bp)
+
